@@ -65,6 +65,13 @@ public class InOut {
                 solver.printBoard();
                 Main.setResults(solver.getBoard(), solver.getIteration(), timeTaken);
             } else {
+                char[][] emptyBoard = new char[N][M];
+                for (int i = 0; i < N; i++) {
+                    for (int j = 0; j < M; j++) {
+                        emptyBoard[i][j] = ' ';
+                    }
+                }
+                Main.setResults(emptyBoard, solver.getIteration(), timeTaken);
                 System.out.println("No Solution!");
             }
 

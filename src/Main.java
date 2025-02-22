@@ -109,7 +109,7 @@ public class Main {
 
         JButton saveButton = new JButton("Save as File");
         saveButton.addActionListener(e -> {
-            String fileName = JOptionPane.showInputDialog(resultsFrame, "Enter the file name:");
+            String fileName = JOptionPane.showInputDialog(resultsFrame, "Enter file name:");
             if (fileName != null && !fileName.trim().isEmpty()) {
                 String folderPath = "test/";
                 File folder = new File(folderPath);
@@ -123,7 +123,7 @@ public class Main {
 
         JButton saveImageButton = new JButton("Save as Image");
         saveImageButton.addActionListener(e -> {
-            String fileName = JOptionPane.showInputDialog(resultsFrame, "Enter the image file name:");
+            String fileName = JOptionPane.showInputDialog(resultsFrame, "Enter image name:");
             if (fileName != null && !fileName.trim().isEmpty()) {
                 String folderPath = "test/";
                 File folder = new File(folderPath);

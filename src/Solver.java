@@ -45,7 +45,7 @@ public class Solver {
         }
 
         if (board[startX][startY] != ' ') {
-            if (startX < N - 1 || nextY < M) {
+            if (startX < N - 1 || nextY < M-1) {
                 return solvePuzzle(nextX, nextY);
             } else {
                 return isSolved();
@@ -67,17 +67,20 @@ public class Solver {
                         Piece temp = pieces[i];
                         pieces[i] = null;
 
-                        System.out.println("\nPlaced piece " + currentPiece.alphabet + " at " + startX + "," + startY);
-                        printBoard();
-
-                        if (startX < N - 1 || nextY < M ? solvePuzzle(nextX, nextY) : isSolved()) {
-                            return true;
+                        if (startX < N - 1 || nextY < M) {
+                            if (solvePuzzle(nextX, nextY)) {
+                                return true;
+                            }
+                        } else {
+                            if (isSolved()) {
+                                return true;
+                            }
                         }
 
-//                        System.out.println("\nRemoving piece " + currentPiece.alphabet + " from " + startX + "," + startY);
+//
                         removePiece(availPiece, startX, startY);
                         pieces[i] = temp;
-//                        printBoard();
+//
                     }
                 }
             }
