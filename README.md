@@ -11,6 +11,6 @@ Program IQ Puzzler Solver ini merupakan program untuk menyelesaikan suatu permai
 6. Klik tombol "Choose a file" dan pilih file .txt yang berisikan puzzle yang ingin dipecahkan
 
 
-##Author
+## Author
 Samuel Gerrard Hamonangan Girsang
 13523064
