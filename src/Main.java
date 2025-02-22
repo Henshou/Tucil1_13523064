@@ -56,7 +56,6 @@ public class Main {
         JPanel mainPanel = new JPanel(new BorderLayout());
 
         JPanel boardPanel = new JPanel() {
-            @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 int cellSize = 60;
@@ -84,11 +83,6 @@ public class Main {
                 }
             }
 
-            @Override
-            public Dimension getPreferredSize() {
-                int cellSize = 60;
-                return new Dimension(finalBoard[0].length * cellSize, finalBoard.length * cellSize);
-            }
         };
 
         JScrollPane scrollPane = new JScrollPane(boardPanel);
