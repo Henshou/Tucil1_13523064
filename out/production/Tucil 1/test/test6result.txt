@@ -1,0 +1,9 @@
+Final Board State:
+B B B C C C 
+A B G F C C 
+A A G F F F 
+E A A D D F 
+E E A A D D 
+
+Number of Iterations: 384487
+Time Taken: 4892 ms
