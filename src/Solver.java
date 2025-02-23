@@ -36,7 +36,19 @@ public class Solver {
 //        printBoard();
 
         iteration++;
+        boolean allPiecesPlaced = true;
+        for (Piece piece : pieces) {
+            if (piece != null) {
+                allPiecesPlaced = false;
+                break;
+            }
+        }
+
+        if (allPiecesPlaced) {
+            return isSolved();
+        }
         if (isSolved()) return true;
+
 
         int nextX = startX, nextY = startY + 1;
         if (nextY >= M) {
